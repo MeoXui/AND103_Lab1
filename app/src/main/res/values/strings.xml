@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AND103_Lab1</string>
+    <string name="sDK">Đăng ký</string>
+    <string name="sTDN">Tên đang nhập</string>
+    <string name="sMK">Mật khẩu</string>
+    <string name="sDN">Đăng nhập</string>
+    <string name="sDX">Đăng xuất</string>
+    <string name="sQMK"><u>Quên mật khẩu?</u></string>
+    <string name="sE">Email</string>
+    <string name="sG">Gửi</string>
+    <string name="sSDT">Số điện thoại</string>
+    <string name="sL">Lấy OTP</string>
+</resources>

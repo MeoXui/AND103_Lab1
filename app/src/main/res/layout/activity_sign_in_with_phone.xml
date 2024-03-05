@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInWithPhoneActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/sSDT"
+        android:textSize="25sp"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/btnGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/sL"
+        android:textSize="25sp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="OTP"
+        android:textSize="25sp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/sDN"
+        android:textSize="25sp"/>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edUN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/sE"
+        android:textSize="25sp"
+        android:inputType="text"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edPW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/sMK"
+        android:textSize="25sp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/sDK"
+        android:textSize="25sp"/>
+
+</LinearLayout>
