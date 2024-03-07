@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseUser;
+
 public class SignInActivity extends AppCompatActivity {
     EditText edUN, edPW;
     Button btnLogin;
@@ -38,6 +40,17 @@ public class SignInActivity extends AppCompatActivity {
         tvSignup = findViewById(R.id.tvSignup);
 
         services = new Services(this);
+
+        FirebaseUser user = services.getUser();
+//        if(user != null){
+//            String name = user.getDisplayName();
+//            String email = user.getEmail();
+//            Uri photoUrl = user.getPhotoUrl();
+//
+//            boolean emailVerified = user.isEmailVerified();
+//
+//            String uid = user.getUid();
+//        }
 
         btnLogin.setOnClickListener(v -> {
             email = edUN.getText().toString();

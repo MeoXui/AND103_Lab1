@@ -30,15 +30,10 @@ public class Services {
         this.activity = activity;
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
-//        if(user != null) {
-//            String name = user.getDisplayName();
-//            String email = user.getEmail();
-//            Uri photoUrl = user.getPhotoUrl();
-//
-//            boolean emailVerified = user.isEmailVerified();
-//
-//            String uid = user.getUid();
-//        }
+    }
+
+    public FirebaseUser getUser() {
+        return user;
     }
 
     public void signin(String email, String password, Class next){
@@ -115,6 +110,7 @@ public class Services {
                 user = auth.getCurrentUser();
                 Toast.makeText(activity, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                 activity.startActivity(new Intent(activity, next));
+                activity.finish();
             } else Log.w(TAG,"signInWithCredential:failure", task.getException());
         });
     }
