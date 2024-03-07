@@ -12,11 +12,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.firebase.auth.FirebaseUser;
+//import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
     EditText edUN, edPW;
-    Button btnLogin;
+    Button btnSignin, btnSWP;
     TextView tvForget, tvSignup;
     Services services;
 
@@ -35,13 +35,14 @@ public class SignInActivity extends AppCompatActivity {
 
         edUN = findViewById(R.id.edUN);
         edPW = findViewById(R.id.edPW);
-        btnLogin = findViewById(R.id.btnLogin);
+        btnSignin = findViewById(R.id.btnSignin);
         tvForget = findViewById(R.id.tvForget);
         tvSignup = findViewById(R.id.tvSignup);
+        btnSWP = findViewById(R.id.btnSWP);
 
         services = new Services(this);
 
-        FirebaseUser user = services.getUser();
+//        FirebaseUser user = services.getUser();
 //        if(user != null){
 //            String name = user.getDisplayName();
 //            String email = user.getEmail();
@@ -52,7 +53,7 @@ public class SignInActivity extends AppCompatActivity {
 //            String uid = user.getUid();
 //        }
 
-        btnLogin.setOnClickListener(v -> {
+        btnSignin.setOnClickListener(v -> {
             email = edUN.getText().toString();
             password = edPW.getText().toString();
             services.signin(email, password, SignOutActivity.class);
@@ -65,5 +66,8 @@ public class SignInActivity extends AppCompatActivity {
 
         tvSignup.setOnClickListener(v ->
                 startActivity(new Intent(this, SignUpActivity.class)));
+
+        btnSWP.setOnClickListener(v ->
+                startActivity(new Intent(this, SignInWithPhoneActivity.class)));
     }
 }
