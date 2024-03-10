@@ -12,8 +12,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-//import com.google.firebase.auth.FirebaseUser;
-
 public class SignInActivity extends AppCompatActivity {
     EditText edUN, edPW;
     Button btnSignin, btnSWP;
@@ -41,17 +39,6 @@ public class SignInActivity extends AppCompatActivity {
         btnSWP = findViewById(R.id.btnSWP);
 
         services = new Services(this);
-
-//        FirebaseUser user = services.getUser();
-//        if(user != null){
-//            String name = user.getDisplayName();
-//            String email = user.getEmail();
-//            Uri photoUrl = user.getPhotoUrl();
-//
-//            boolean emailVerified = user.isEmailVerified();
-//
-//            String uid = user.getUid();
-//        }
 
         btnSignin.setOnClickListener(v -> {
             email = edUN.getText().toString();

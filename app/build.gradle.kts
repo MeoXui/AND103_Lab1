@@ -43,6 +43,7 @@ dependencies {
     implementation("com.google.firebase:firebase-config:9.6.1")
     implementation("com.google.firebase:firebase-invites:9.6.1")
     implementation("com.google.firebase:firebase-messaging:9.6.1")
+    implementation(libs.firebase.firestore)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

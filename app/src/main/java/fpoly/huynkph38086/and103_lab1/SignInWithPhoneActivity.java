@@ -32,13 +32,13 @@ public class SignInWithPhoneActivity extends AppCompatActivity {
         edOTP = findViewById(R.id.edOTP);
         btnGet = findViewById(R.id.btnGet);
         btnLogin = findViewById(R.id.btnLogin);
+        //LottieAnimationView back = findViewById(R.id.back);
 
         services = new Services(this);
 
         btnGet.setOnClickListener(v -> {
             phone = edPhone.getText().toString();
-            services.getOTP(phone);
-            edOTP.setText(services.Callbacks());
+            edOTP.setText(services.getOTP(phone));
         });
 
         btnLogin.setOnClickListener(v -> {
